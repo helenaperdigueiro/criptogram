@@ -96,6 +96,10 @@ footer {
 }
 
 @media screen and (min-width: 600px) {
+    #criptogram-generator-container {
+        grid-template-columns: 1fr 5fr 1fr;
+        padding: 0.5rem 0.5rem 1rem 0.5rem;
+    }
     #key {
         max-width: 30rem;
     }
