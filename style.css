@@ -4,33 +4,85 @@ html, body {
     margin: 0;
 }
 
-#container {
-    height: 100%;
-    width: 100%;
-}
-
-#key-container {
+body {
     display: grid;
     justify-items: center;
 }
 
-#key {
+#container {
+    height: 100%;
     width: 80%;
     display: grid;
-    grid-template-columns: repeat(13, 1fr);
     row-gap: 1rem;
-    column-gap: 0.5rem;
 }
 
-#key div {
-    text-align: center;
+fieldset legend {
+    margin-left: 1rem;
+    padding: 0.5rem;
+}
+
+#criptogram-generator-container {
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
     display: grid;
+    justify-items: center;
+    align-items: center;
     row-gap: 0.5rem;
 }
 
-#key div h6 {
+#input-phrase {
+    width: 100%;
+}
+
+#key-container, #criptogram-container {
+    display: grid;
+    justify-items: center;
+}
+
+#criptogram-container {
+    row-gap: 1rem;
+}
+
+.criptogram {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 1.5rem;
+    border: 1px solid black;
+    justify-content: center;
+    padding: 1.5rem 1rem 1rem 1rem;
+}
+
+.word {
+    display: flex;
+    flex-direction: row;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+
+#key {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+
+#key div, .criptogram .word div {
+    text-align: center;
+    display: grid;
+    row-gap: 0.5rem;
+    max-width: 1rem;
+}
+
+#key div h6, .criptogram div h6 {
     margin: 0;
     border-bottom: 2px solid black;
+    min-height: 1rem;
 }
 
 img {
@@ -44,5 +96,7 @@ footer {
 }
 
 @media screen and (min-width: 600px) {
-
+    #key {
+        max-width: 30rem;
+    }
 }

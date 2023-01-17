@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,19 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header></header>
     <div id="container">
-        <button id="btn-test">test</button>
+        <form action="" id="form">
+            <fieldset id="criptogram-generator-container">
+                <legend>Crie seu criptograma</legend>
+                <label for="phrase">Frase</label>
+                <input type="text" name="phrase" placeholder="Digite uma frase" id="input-phrase">
+                <input type="submit" id="btn-generate-criptogram"></input>
+            </fieldset>
+        </form>
+        <div id="criptogram-container"></div>
         <div id="key-container">
             <h3>Legenda</h3>
             <div id="key"></div>
@@ -21,4 +31,5 @@
     </footer>
     <script src="build/main.js"></script>
 </body>
+
 </html>
