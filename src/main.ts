@@ -1,11 +1,13 @@
 
 const container = window.document.getElementById("container");
 
-const charCodes: readonly number[] = Array.from(Array(2)).map((_element, index) => index + 65);
+const charCodes: readonly number[] = Array.from(Array(26)).map((_element, index) => index + 65);
 const alphabet: readonly string[] = charCodes.map(charCode => String.fromCharCode(charCode));
 console.log(alphabet);
 
-const icons: readonly string[] = ["avocado.png", "baguette.png"];
+const icons: readonly string[] = ["avocado.png", "baguette.png", "banana.png", "barley.png", "biscuit.png", "burger.png", "capsicum.png", "carrot.png", "cauliflower.png", 
+"cheese-slice.png", "chilli.png", "chocolate.png", "cutlery.png", "disposable.png", "donut.png", "eggplant.png", "fried-fish.png", "honey-dipper.png", "ice-cream.png", 
+"lobster.png", "peas.png", "pizza-slice.png", "toaster.png", "turkey.png", "turnip.png", "waffle.png"];
 console.log(icons);
 
 const charsIcons: Map<string, string> = new Map();

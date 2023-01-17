@@ -7,25 +7,29 @@ html, body {
 #container {
     height: 100%;
     width: 100%;
-    padding: 5% 10%;
+}
+
+#key-container {
+    display: grid;
+    justify-items: center;
 }
 
 #key {
-    /* width: 100%; */
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(13, 1fr);
-    /* row-gap: 2%;
-    column-gap: 2%; */
-    /* max-height: 6rem; */
+    row-gap: 1rem;
+    column-gap: 0.5rem;
 }
 
 #key div {
     text-align: center;
-    /* height: 50%; */
+    display: grid;
+    row-gap: 0.5rem;
 }
 
 #key div h6 {
-    /* margin: 5% 10%; */
+    margin: 0;
     border-bottom: 2px solid black;
 }
 

@@ -1,8 +1,11 @@
+"use strict";
 var container = window.document.getElementById("container");
-var charCodes = Array.from(Array(2)).map(function (_element, index) { return index + 65; });
+var charCodes = Array.from(Array(26)).map(function (_element, index) { return index + 65; });
 var alphabet = charCodes.map(function (charCode) { return String.fromCharCode(charCode); });
 console.log(alphabet);
-var icons = ["avocado.png", "baguette.png"];
+var icons = ["avocado.png", "baguette.png", "banana.png", "barley.png", "biscuit.png", "burger.png", "capsicum.png", "carrot.png", "cauliflower.png",
+    "cheese-slice.png", "chilli.png", "chocolate.png", "cutlery.png", "disposable.png", "donut.png", "eggplant.png", "fried-fish.png", "honey-dipper.png", "ice-cream.png",
+    "lobster.png", "peas.png", "pizza-slice.png", "toaster.png", "turkey.png", "turnip.png", "waffle.png"];
 console.log(icons);
 var charsIcons = new Map();
 alphabet.forEach(function (char, index) { return charsIcons.set(char, icons[index]); });
