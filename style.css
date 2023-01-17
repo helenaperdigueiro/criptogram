@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+    padding: 5% 10%;
+}
+
+#key {
+    /* width: 100%; */
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    /* row-gap: 2%;
+    column-gap: 2%; */
+    /* max-height: 6rem; */
+}
+
+#key div {
+    text-align: center;
+    /* height: 50%; */
+}
+
+#key div h6 {
+    /* margin: 5% 10%; */
+    border-bottom: 2px solid black;
+}
+
+img {
+    object-fit: contain;
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    
+}
+
+@media screen and (min-width: 600px) {
+
+}
