@@ -35,13 +35,29 @@ fieldset legend {
     width: 100%;
 }
 
-#key-container, #criptogram-container {
+#key-container, #criptograms-container {
     display: grid;
     justify-items: center;
 }
 
-#criptogram-container {
+#criptograms-container {
     row-gap: 1rem;
+}
+
+.criptogram-container {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.criptogram-btns {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 0.25rem;
+    padding: 0.25rem;
+}
+
+.btn-delete-criptogram, #btn-show-hide {
+    width: 1rem;
 }
 
 .criptogram {
@@ -52,7 +68,6 @@ fieldset legend {
     flex-wrap: wrap;
     row-gap: 1rem;
     column-gap: 1.5rem;
-    border: 1px solid black;
     justify-content: center;
     padding: 1.5rem 1rem 1rem 1rem;
 }
@@ -79,10 +94,14 @@ fieldset legend {
     max-width: 1rem;
 }
 
-#key div h6, .criptogram div h6 {
+#key div h6, .letter-container {
     margin: 0;
-    border-bottom: 2px solid black;
     min-height: 1rem;
+    border-bottom: 2px solid black;
+}
+
+.hidden {
+    opacity: 0;
 }
 
 img {
