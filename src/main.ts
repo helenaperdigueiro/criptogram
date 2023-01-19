@@ -28,29 +28,29 @@
             const phraseChars: string[] = [...phrase];
             input.value = "";
             const criptogramContainer = document.createElement("div");
-            criptogramContainer.setAttribute("class", "criptogram-container");
+            criptogramContainer.classList.add("criptogram-container");
 
             const criptogramBtns = document.createElement("div");
-            criptogramBtns.setAttribute("class", "criptogram-btns");
+            criptogramBtns.classList.add("criptogram-btns");
 
             const btnDeleteCriptogram = document.createElement("img");
-            btnDeleteCriptogram.setAttribute("class", "btn-delete-criptogram");
+            btnDeleteCriptogram.classList.add("btn-delete-criptogram");
             btnDeleteCriptogram.setAttribute("src", "./icons/btns/delete.png");
             btnDeleteCriptogram.addEventListener("click", () => criptogramContainer.remove());
             criptogramBtns.appendChild(btnDeleteCriptogram);
 
             criptogramContainer.appendChild(criptogramBtns);
             const criptogram = document.createElement("div");
-            criptogram.setAttribute("class", "criptogram");
+            criptogram.classList.add("criptogram");
             let word = document.createElement("div");
-            word.setAttribute("class", "word");
+            word.classList.add("word");
             let letter: HTMLDivElement;
 
             phraseChars.forEach(char => {
                 if (char == " ") {
                     criptogram.appendChild(word);
                     word = document.createElement("div");
-                    word.setAttribute("class", "word");
+                    word.classList.add("word");
                 } else {
                     letter = addLetter(char);
                     word.appendChild(letter);
