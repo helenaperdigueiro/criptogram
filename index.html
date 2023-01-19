@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criptograma</title>
+    <script src="./build/main.js"></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="./icons/favicon/digital-key.png" type="image/x-icon">
 </head>
@@ -19,20 +20,29 @@
                 <label for="phrase">Frase</label>
                 <input type="text" name="phrase" placeholder="Digite uma frase" id="input-phrase">
                 <input type="submit" id="btn-generate-criptogram"></input>
-                
+                <div class="tooltip">
+                    <img src="./icons/btns/show.png" alt="" id="btn-show-hide">
+                    <span class="tooltiptext">Mostrar/esconder as letras</span>
+                </div>
+                <div class="tooltip">
+                    <img src="./icons/btns/shuffle-key.png" alt="" id="btn-shuffle-key">
+                    <span class="tooltiptext">Embaralhar a legenda (todos os criptogramas serão excluídos)</span>
+                </div>
+                <div class="tooltip">
+                    <img src="./icons/btns/delete-all.png" alt="" id="btn-delete-all">
+                    <span class="tooltiptext">Deletar todos os criptogramas</span>
+                </div>
             </fieldset>
         </form>
-        <div id="criptograms-container"><img src="./icons/btns/show.png" alt="" id="btn-show-hide"></div>
+        <div id="criptograms-container" hidden-letters="true"></div>
         <div id="key-container">
             <h3>Legenda</h3>
-            <div id="key"></div>
         </div>
     </div>
     <footer>
         <h6>Icons from <a href="https://www.flaticon.com/authors/smashingstocks">smashingstocks</a></h6>
     </footer>
 
-    <script src="./build/main.js"></script>
 </body>
 
 </html>

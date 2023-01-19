@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
     margin: 0;
@@ -35,7 +36,8 @@ fieldset legend {
     width: 100%;
 }
 
-#key-container, #criptograms-container {
+#key-container,
+#criptograms-container {
     display: grid;
     justify-items: center;
 }
@@ -56,8 +58,43 @@ fieldset legend {
     padding: 0.25rem;
 }
 
-.btn-delete-criptogram, #btn-show-hide {
+.btn-delete-criptogram,
+#btn-show-hide,
+#btn-shuffle-key,
+#btn-delete-all {
     width: 1rem;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+#btn-generate-criptogram {
+    cursor: pointer;
 }
 
 .criptogram {
@@ -69,7 +106,7 @@ fieldset legend {
     row-gap: 1rem;
     column-gap: 1.5rem;
     justify-content: center;
-    padding: 1.5rem 1rem 1rem 1rem;
+    padding: 0.5rem;
 }
 
 .word {
@@ -87,20 +124,26 @@ fieldset legend {
     column-gap: 0.5rem;
 }
 
-#key div, .criptogram .word div {
+#key div,
+.criptogram .word div {
     text-align: center;
     display: grid;
     row-gap: 0.5rem;
     max-width: 1rem;
 }
 
-#key div h6, .letter-container {
+#key div h6,
+.letter-container {
     margin: 0;
     min-height: 1rem;
     border-bottom: 2px solid black;
 }
 
-.hidden {
+.letter-container h6 {
+    margin: 0;
+}
+
+div[hidden-letters=true] h6 {
     opacity: 0;
 }
 
@@ -111,7 +154,7 @@ img {
 
 footer {
     text-align: center;
-    
+
 }
 
 @media screen and (min-width: 600px) {
@@ -119,6 +162,7 @@ footer {
         grid-template-columns: 1fr 5fr 1fr;
         padding: 0.5rem 0.5rem 1rem 0.5rem;
     }
+
     #key {
         max-width: 30rem;
     }
