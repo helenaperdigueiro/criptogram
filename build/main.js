@@ -10,7 +10,12 @@
             "lobster.png", "peas.png", "pizza-slice.png", "toaster.png", "turkey.png", "turnip.png", "waffle.png"];
         let currentKey = new Map();
         const shuffleKey = () => {
-            alphabet.forEach((char, index) => currentKey.set(char, icons[Math.floor(Math.random() * icons.length)]));
+            const iconsCopy = [...icons];
+            alphabet.forEach((char) => {
+                const index = Math.floor(Math.random() * iconsCopy.length);
+                currentKey.set(char, iconsCopy[index]);
+                iconsCopy.splice(index, 1);
+            });
         };
         (_a = document.getElementById("form")) === null || _a === void 0 ? void 0 : _a.addEventListener("submit", (event) => {
             event.preventDefault();

@@ -12,7 +12,12 @@
 
         let currentKey: Map<string, string> = new Map();
         const shuffleKey = () => {
-            alphabet.forEach((char, index) => currentKey.set(char, icons[Math.floor(Math.random() * icons.length)]));
+            const iconsCopy: string[] = [...icons];
+            alphabet.forEach((char) => {
+                const index = Math.floor(Math.random() * iconsCopy.length);
+                currentKey.set(char, iconsCopy[index]);
+                iconsCopy.splice(index, 1);
+            });
         }
 
         document.getElementById("form")?.addEventListener("submit", (event) => {
